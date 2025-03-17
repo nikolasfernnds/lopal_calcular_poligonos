@@ -1,15 +1,26 @@
 package br.sp.senai.jandira.calculo;
 
+import java.util.Scanner;
+
 import br.sp.senai.jandira.calculo.model.Circunferencia;
+import br.sp.senai.jandira.calculo.model.Menu;
 import br.sp.senai.jandira.calculo.model.Quadrado;
 import br.sp.senai.jandira.calculo.model.Retangulo;
 import br.sp.senai.jandira.calculo.model.Trapezio;
 import br.sp.senai.jandira.calculo.model.Triangulo;
 
+
 public class CalcularApp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Menu.criarMenu();
+		
+		Scanner leitor = new Scanner(System.in);
+		System.out.print("Qual a altura do retângulo?");
+		double valorAltura = leitor.nextDouble();
+		System.out.print("Qual a base do retângulo?");
+		double valorBase = leitor.nextDouble();		
 		
 		Retangulo r1  = new Retangulo();
 		System.out.println(r1);
@@ -22,8 +33,8 @@ public class CalcularApp {
 		Trapezio tpz = new Trapezio ();
 		System.out.println(tpz);
 		
-		r1.setAltura(10);
-		r1.setBase(50);
+		r1.setAltura(valorAltura);
+		r1.setBase(valorBase);
 		r1.exibirDados();
 		
 		q1.setAltura(10);

@@ -1,6 +1,6 @@
 package br.sp.senai.jandira.calculo.model;
 
-public class Retangulo {
+public class Quadrado {
 	private double base;
 	private double altura;
 	private double perimetro;
@@ -41,8 +41,7 @@ public class Retangulo {
 	public void exibirDados() {
 		double area = calcularArea();
 		double perimetro = calcularPerimetro();
-		System.out.println("=========================");
-		System.out.println("Retangulo");
+		System.out.println("Quadrado");
 		System.out.printf("Area: %s\n", area);
 		System.out.printf("Perimetro: %s\n", perimetro);
 		System.out.println("=========================");

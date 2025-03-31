@@ -2,56 +2,46 @@ package br.sp.senai.jandira.calculo;
 
 import java.util.Scanner;
 
-import br.sp.senai.jandira.calculo.model.Circunferencia;
-import br.sp.senai.jandira.calculo.model.Menu;
-import br.sp.senai.jandira.calculo.model.Quadrado;
-import br.sp.senai.jandira.calculo.model.Retangulo;
-import br.sp.senai.jandira.calculo.model.Trapezio;
-import br.sp.senai.jandira.calculo.model.Triangulo;
+import br.sp.senai.jandira.calculo.ui.Menu;
 
 
 public class CalcularApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Menu.criarMenu();
 		
+		System.out.println("Tabuada do 9");
+		int contador = 1;
+		while(contador <= 10) {
+			int resultado = 9 * contador;
+			System.out.println("9 x " + contador + " = " + resultado);
+			contador = contador + 1;
+		}
+		System.out.println();
+		System.out.println("Números ímpares de 0 à 100");
+		
+		contador = 0;
+		
+		while(contador <= 100) {
+			if(contador % 2 == 1) {
+				System.out.println(contador);
+			}
+			contador += 2;
+		}
+		System.out.println();
+		System.out.println("------------------");
 		Scanner leitor = new Scanner(System.in);
-		System.out.print("Qual a altura do retângulo?");
-		double valorAltura = leitor.nextDouble();
-		System.out.print("Qual a base do retângulo?");
-		double valorBase = leitor.nextDouble();		
+		String resposta = "s";
+		while (resposta.equalsIgnoreCase("s")){
+		System.out.println("Estamos dando voltas!");
+		System.out.println("Mais uma volta? (S/N)");
+		resposta = leitor.next();
+		}
 		
-		Retangulo r1  = new Retangulo();
-		System.out.println(r1);
-		Quadrado q1 = new Quadrado();
-		System.out.println(q1);
-		Triangulo t1 = new Triangulo();
-		System.out.println(t1);
-		Circunferencia c1 = new Circunferencia();
-		System.out.println(c1);
-		Trapezio tpz = new Trapezio ();
-		System.out.println(tpz);
+		leitor.close();
 		
-		r1.setAltura(valorAltura);
-		r1.setBase(valorBase);
-		r1.exibirDados();
+		//Menu.criarMenu();
+	
 		
-		q1.setAltura(10);
-		q1.setBase(10);
-		q1.exibirDados();
-		
-		t1.setAltura(3);
-		t1.setBase(8);
-		t1.exibirDados();
-		
-		c1.setRaio(5);
-		c1.exibirDados();
-		
-		tpz.setAltura(3);
-		tpz.setBaseMaior(5);
-		tpz.setBaseMenor(4);
-		tpz.exibirDados();
 	}
 
 }
